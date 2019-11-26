@@ -25,7 +25,7 @@ function loadTodos() {
         console.log(data[i].description)
         // algo asi:
         // addTodo(data[i]._id, data[i].description, data[i].completed)
-        let newHTML = `<li><input type="checkbox" name="todo" value="0"><span> ${data.description} </span></li>`
+        let newHTML = `<li><input type="checkbox" name="todo" value="0"><span> ${data[i].description} </span></li>`
     
         $("#todo-list").append(newHTML)
 
