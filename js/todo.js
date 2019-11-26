@@ -34,7 +34,7 @@ function loadTodos() {
     error: function(error_msg) {
       alert((error_msg['responseText']));
     }
-  });
+  });//aaa
 }
 
 loadTodos()
