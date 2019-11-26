@@ -1,6 +1,13 @@
 
 $('#signup_button').on('click', function(){
   // cargar los valores de password, email, name, age
+
+  let email = $('#email').val()
+  let password = $('#password').val()
+  let name = $("#name").val()
+  let age = $("#age").val()
+
+
   json_to_send = {
     "password" : password,
     "email": email,
@@ -22,6 +29,9 @@ $('#signup_button').on('click', function(){
     success: function(data){
       alert("Usuario creado con exito");
       console.log('success: '+ data);
+
+      localStorage.setItem("token", data.token)
+
       window.location = './index.html'
     },
     error: function(error_msg) {
