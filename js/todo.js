@@ -25,8 +25,10 @@ function loadTodos() {
         console.log(data[i].description)
         // algo asi:
         // addTodo(data[i]._id, data[i].description, data[i].completed)
-        // no tienen que usar la funcion de addTodo, es un ejemplo
-        $("#todo-list").append(`<li>${data[i]._id, data[i].description, data[i].completed}</li>`)
+        let newHTML = `<li><input type="checkbox" name="todo" value="0"><span> ${data.description} </span></li>`
+    
+        $("#todo-list").append(newHTML)
+
       }
     },
     error: function(error_msg) {
