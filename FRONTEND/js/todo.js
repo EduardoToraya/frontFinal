@@ -8,7 +8,7 @@ var todos = document.querySelectorAll("input[type=checkbox]");
 
 function loadTodos() {
   $.ajax({
-    url: 'http://exfintoraya.herokuapp.com/todos',
+    url: 'http://localhost:3000/todos',
     // url: 'https://tuapp.herokuapp.com/todos',
     headers: {
         'Content-Type':'application/json',
